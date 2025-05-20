@@ -1,0 +1,29 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@1.4.0/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "你的GitHub用户名/botply-kit" }
+  ],
+  "commit": false,
+  "fixed": [["@botply-kit/**"]],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+    "onlyUpdatePeerDependentsWhenOutOfRange": true
+  },
+  "ignore": [
+    "next-app",
+    "next-pages",
+    "vite-ts",
+    "vite-jsx",
+    "remix-ts",
+    "panda-preset",
+    "storybook-ts",
+    "shadow-dom",
+    "sandbox-iframe",
+    "react-router-ts",
+    "@chakra-ui/www",
+    "@chakra-ui/compositions"
+  ]
+}

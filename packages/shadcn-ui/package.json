@@ -1,0 +1,67 @@
+{
+  "name": "@botply-kit/shadcn-ui",
+  "version": "1.0.0",
+  "description": "A shadcn UI package for botply",
+  "type": "module",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Iafine <iafineden@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://www.botply-kit.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/botply/botply-kit",
+    "directory": "packages/utils"
+  },
+  "keywords": [
+    "botply",
+    "utils"
+  ],
+  "storybook": {
+    "title": "Botply Kit",
+    "url": "https://storybook.botply-kit.com"
+  },
+  "dependencies": {
+    "@botply-kit/utils": "workspace:*",
+    "@radix-ui/react-accordion": "^1.2.10",
+    "@radix-ui/react-slot": "^1.2.2",
+    "class-variance-authority": "^0.7.1",
+    "lucide-react": "^0.511.0"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "scripts": {
+    "prepack": "tsx ../../scripts/conditions.ts",
+    "postpack": "tsx ../../scripts/conditions.ts --restore",
+    "build:fast": "tsx ../../scripts/build/main.ts",
+    "build": "tsx ../../scripts/build/main.ts --dts",
+    "dev": "pnpm build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typedocs": "tsx scripts/typedocs.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  }
+}
