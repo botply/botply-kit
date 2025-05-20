@@ -12,18 +12,5 @@
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   },
-  "ignore": [
-    "next-app",
-    "next-pages",
-    "vite-ts",
-    "vite-jsx",
-    "remix-ts",
-    "panda-preset",
-    "storybook-ts",
-    "shadow-dom",
-    "sandbox-iframe",
-    "react-router-ts",
-    "@chakra-ui/www",
-    "@chakra-ui/compositions"
-  ]
+  "ignore": []
 }
