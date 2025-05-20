@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/@changesets/config@1.4.0/schema.json",
   "changelog": [
     "@changesets/changelog-github",
-    { "repo": "你的GitHub用户名/botply-kit" }
+    { "repo": "botply/botply-kit" }
   ],
   "commit": false,
   "fixed": [["@botply-kit/**"]],
