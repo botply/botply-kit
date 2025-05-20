@@ -1,5 +1,11 @@
 # @botply-kit/utils
 
+## 2.0.1
+
+### Patch Changes
+
+- 修复dist目录不存在的问题
+
 ## 2.0.0
 
 ### Major Changes
