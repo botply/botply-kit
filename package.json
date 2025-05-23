@@ -29,6 +29,7 @@
     "build:storybook": "pnpm build:fast && storybook build",
     "serve:storybook": "pnpx serve storybook-static",
     "clean": "pnpm -r --parallel exec rimraf dist *.log",
+    "clean:node_modules": "pnpm -r --parallel exec rimraf node_modules",
     "slack": "tsx scripts/slack.ts",
     "next:enter": "changeset pre enter next",
     "next:exit": "changeset pre exit next",
