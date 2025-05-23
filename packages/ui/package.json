@@ -23,7 +23,7 @@
   },
   "keywords": [
     "botply",
-    "utils"
+    "ui"
   ],
   "storybook": {
     "title": "Botply Kit",
