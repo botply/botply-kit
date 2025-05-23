@@ -1,4 +1,4 @@
-# @botply-kit/shadcn-ui
+# @botply-kit/ui
 
 ## 2.0.1
 

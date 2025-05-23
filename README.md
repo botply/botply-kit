@@ -6,11 +6,11 @@
 
 ```bash
 
-pnpm add react --filter @botply-kit/shadcn-ui
+pnpm add react --filter @botply-kit/ui
 
-pnpm add -D typescript --filter @botply-kit/shadcn-ui
+pnpm add -D typescript --filter @botply-kit/ui
 
-pnpm add -P react --filter @botply-kit/shadcn-ui
+pnpm add -P react --filter @botply-kit/ui
 
 ```
 

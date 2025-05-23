@@ -6,6 +6,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@botply-kit/utils": resolve("packages/utils/src"),
+      "@botply-kit/ui": resolve("packages/ui/src"),
     },
   },
   test: {
