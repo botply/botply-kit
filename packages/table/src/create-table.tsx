@@ -1,25 +1,24 @@
-import { TResponsePage } from "@/types"
-import { UseSuspenseQueryResult } from "@tanstack/react-query"
+import type { UseSuspenseQueryResult } from "@tanstack/react-query"
 import { CommonDataTable } from "./common-data-table"
 import {
-  CommonAction,
-  CommonBulkAction,
-  CommonColumn,
-  CommonToolbarAction,
+  type APIResponsePage,
+  type CommonAction,
+  type CommonBulkAction,
+  type CommonColumn,
+  type CommonToolbarAction,
 } from "./types"
 
-// components/common/createListPage.ts
-interface CreateListPageProps<T> {
+interface CreateTableProps<T> {
   title: string
   columns: CommonColumn<T>[]
-  query: () => UseSuspenseQueryResult<TResponsePage<any>, Error>
+  query: () => UseSuspenseQueryResult<APIResponsePage<any>, Error>
   searchableFields?: (keyof T)[]
   actions?: CommonAction<T>[]
   toolbarActions?: CommonToolbarAction[]
   bulkActions?: CommonBulkAction<T>[]
 }
 
-export function createListPage<T extends { id: number }>({
+export function createTable<T extends { id: number }>({
   title,
   columns,
   query,
@@ -27,7 +26,7 @@ export function createListPage<T extends { id: number }>({
   actions = [],
   toolbarActions = [],
   bulkActions = [],
-}: CreateListPageProps<T>) {
+}: CreateTableProps<T>) {
   return function ListPage() {
     const { data } = query()
 

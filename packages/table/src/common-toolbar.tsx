@@ -1,6 +1,6 @@
-import { Table } from "@tanstack/react-table"
-import { Button } from "../ui/button"
-import { CommonBulkAction, CommonToolbarAction } from "./types"
+import { Button } from "@botply-kit/ui"
+import type { Table } from "@tanstack/react-table"
+import type { CommonBulkAction, CommonToolbarAction } from "./types"
 
 interface TableToolbarProps<T> {
   table: Table<T>

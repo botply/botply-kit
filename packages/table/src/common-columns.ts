@@ -1,5 +1,5 @@
-import { dateTimeFormat } from "@/lib/time-utils"
-import { CommonColumn } from "./types"
+import { dateTimeFormat } from "@botply-kit/utils"
+import type { CommonColumn } from "./types"
 
 export const createCommonColumns = <
   T extends { id: number; createdAt: string; updatedAt: string; name?: string },

@@ -30,10 +30,11 @@
     "url": "https://storybook.botply-kit.com"
   },
   "dependencies": {
-    "@botply-kit/utils": "workspace:*",
     "@botply-kit/ui": "workspace:*",
+    "@botply-kit/utils": "workspace:*",
     "@radix-ui/react-icons": "^1.3.2",
     "@tabler/icons-react": "^3.33.0",
+    "@tanstack/react-query": "^5.76.2",
     "@tanstack/react-table": "^8.21.3"
   },
   "scripts": {

@@ -1,13 +1,22 @@
-import { cn } from "@/lib/utils"
-import { DataTableToolbar } from "@/pages/product/components/data-table-toolbar"
 import {
-  Column,
-  ColumnDef,
-  ColumnFiltersState,
-  Row,
-  SortingState,
-  Table as TableInstance,
-  VisibilityState,
+  Checkbox,
+  HighlightText,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@botply-kit/ui"
+import { cn } from "@botply-kit/utils"
+import {
+  type Column,
+  type ColumnDef,
+  type ColumnFiltersState,
+  type Row,
+  type SortingState,
+  type Table as TableInstance,
+  type VisibilityState,
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
@@ -16,25 +25,16 @@ import {
   useReactTable,
 } from "@tanstack/react-table"
 import { useState } from "react"
-import { HighlightText } from "../highlight-text"
-import { Checkbox } from "../ui/checkbox"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "../ui/table"
 import { CommonColumnHeader } from "./common-column-header"
 import { CommonTablePagination } from "./common-table-pagination"
 import { TableToolbar } from "./common-toolbar"
 import { RowActionDropdown } from "./row-action-dropdown"
+import { TableSearchInput } from "./table-search-input"
 import {
-  CommonAction,
-  CommonBulkAction,
-  CommonColumn,
-  CommonToolbarAction,
+  type CommonAction,
+  type CommonBulkAction,
+  type CommonColumn,
+  type CommonToolbarAction,
 } from "./types"
 
 interface CommonDataTableProps<T> {
@@ -175,7 +175,7 @@ export function CommonDataTable<T extends { id: number }>({
       />
       <div className="-mx-4 flex-1 overflow-auto px-4 py-1 lg:flex-row lg:space-x-12 lg:space-y-0">
         <div className="space-y-4">
-          <DataTableToolbar table={table} />
+          <TableSearchInput table={table} />
           <div className="border rounded-lg overflow-hidden">
             <Table>
               <TableHeader>

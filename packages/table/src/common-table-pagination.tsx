@@ -1,18 +1,18 @@
-import { Button } from "@/components/ui/button"
 import {
+  Button,
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@botply-kit/ui"
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
   DoubleArrowLeftIcon,
   DoubleArrowRightIcon,
 } from "@radix-ui/react-icons"
-import { Table } from "@tanstack/react-table"
+import type { Table } from "@tanstack/react-table"
 
 interface CommonTablePaginationProps<TData> {
   table: Table<TData>

@@ -40,3 +40,8 @@ export interface CommonBulkAction<T> {
   icon?: React.ReactNode
   onClick: (selectedRows: T[]) => void
 }
+
+export interface APIResponsePage<T> {
+  list: T[]
+  total: number
+}
